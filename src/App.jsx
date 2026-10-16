@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
 import SectionTitle from "./components/SectionTitle";
 import Button from "./components/Button";
 
@@ -19,14 +20,6 @@ function PlaceholderPage({ title, eyebrow, description }) {
     </div>
   );
 }
-
-const HomePlaceholder = () => (
-  <PlaceholderPage
-    eyebrow="Welcome to Aster Coffee"
-    title="Fresh Coffee & Artisanal Bakery"
-    description="Crafted for quiet mornings, cozy conversations, and sweet moments."
-  />
-);
 
 const MenuPlaceholder = () => (
   <PlaceholderPage
@@ -65,7 +58,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<HomePlaceholder />} />
+          <Route index element={<Home />} />
           <Route path="menu" element={<MenuPlaceholder />} />
           <Route path="our-story" element={<StoryPlaceholder />} />
           <Route path="gallery" element={<GalleryPlaceholder />} />
