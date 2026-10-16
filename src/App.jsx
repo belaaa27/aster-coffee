@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
+import Menu from "./pages/Menu";
 import SectionTitle from "./components/SectionTitle";
 import Button from "./components/Button";
 
@@ -20,14 +21,6 @@ function PlaceholderPage({ title, eyebrow, description }) {
     </div>
   );
 }
-
-const MenuPlaceholder = () => (
-  <PlaceholderPage
-    eyebrow="Our Offerings"
-    title="Explore Our Menu"
-    description="Discover our rich espressos, aromatic teas, fresh pastries, and light savory dishes."
-  />
-);
 
 const StoryPlaceholder = () => (
   <PlaceholderPage
@@ -59,7 +52,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
-          <Route path="menu" element={<MenuPlaceholder />} />
+          <Route path="menu" element={<Menu />} />
           <Route path="our-story" element={<StoryPlaceholder />} />
           <Route path="gallery" element={<GalleryPlaceholder />} />
           <Route path="contact" element={<ContactPlaceholder />} />
