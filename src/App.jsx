@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
+import OurStory from "./pages/OurStory";
 import SectionTitle from "./components/SectionTitle";
 import Button from "./components/Button";
 
@@ -21,14 +22,6 @@ function PlaceholderPage({ title, eyebrow, description }) {
     </div>
   );
 }
-
-const StoryPlaceholder = () => (
-  <PlaceholderPage
-    eyebrow="Our Heritage"
-    title="The Aster Coffee Story"
-    description="Learn about our passion for local specialty roasts and time-honored baking."
-  />
-);
 
 const GalleryPlaceholder = () => (
   <PlaceholderPage
@@ -53,7 +46,7 @@ export default function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="menu" element={<Menu />} />
-          <Route path="our-story" element={<StoryPlaceholder />} />
+          <Route path="our-story" element={<OurStory />} />
           <Route path="gallery" element={<GalleryPlaceholder />} />
           <Route path="contact" element={<ContactPlaceholder />} />
         </Route>
