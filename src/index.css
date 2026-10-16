@@ -1,0 +1,21 @@
+/* STREAMING_CHUNK:Setting up Tailwind CSS v4 and theme colors... */
+@import "tailwindcss";
+
+@theme {
+  /* Brand Color Palette */
+  --color-cream: #f7f1e7;
+  --color-espresso: #49352b;
+  --color-caramel: #b8794b;
+  --color-sage: #68745b;
+
+  /* Typography */
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-espresso);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
