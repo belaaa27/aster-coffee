@@ -4,6 +4,7 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import OurStory from "./pages/OurStory";
+import Gallery from "./pages/Gallery";
 import SectionTitle from "./components/SectionTitle";
 import Button from "./components/Button";
 
@@ -23,14 +24,6 @@ function PlaceholderPage({ title, eyebrow, description }) {
   );
 }
 
-const GalleryPlaceholder = () => (
-  <PlaceholderPage
-    eyebrow="Atmosphere"
-    title="Cafe & Bakery Gallery"
-    description="A glimpse into our warm space, freshly baked items, and barista creations."
-  />
-);
-
 const ContactPlaceholder = () => (
   <PlaceholderPage
     eyebrow="Get in Touch"
@@ -47,7 +40,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="menu" element={<Menu />} />
           <Route path="our-story" element={<OurStory />} />
-          <Route path="gallery" element={<GalleryPlaceholder />} />
+          <Route path="gallery" element={<Gallery />} />
           <Route path="contact" element={<ContactPlaceholder />} />
         </Route>
       </Routes>
